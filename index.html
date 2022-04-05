@@ -10,13 +10,15 @@
 </head>
 
 <body>
-    <h1>Type a word in the box</h1>
-    <input type="text" id="str">
-    <div id="output"></div>
-    <button id="btn">
-        <h2>Click to calculate word length</h2>
-    </button>
+    <div id="app">
+        <h1>Type a word in the box</h1>
+        <input type="text" id="str" v-model="word" :style="{'color': getTextColor}">
+        <div id="output">
+            <h1>Word length: {{ word.length }}</h1>
+        </div>
+    </div>
 
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="app.js"></script>
 </body>
 
